@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "mongodb+srv://DevDouu:RqPIwiortbsiJWNt@cluster0.d6aspiz.mongodb.net/?appName=Cluster0",
+    "JWT_SECRET": "your-super-secret-jwt-key-change-this-in-production-123456789",
+    "JWT_EXPIRE": "7d",
+    "NODE_ENV": "production",
+    "PORT": "5000",
+    "CORS_ALLOWED_ORIGINS": "https://aakhadanaty-app.vercel.app,http://localhost:3000,http://localhost:5173"
+  }
+}

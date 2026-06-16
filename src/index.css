@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background: #F8FAFC - Soft Off-White */
+    --background: 210 33% 98%;
+    /* Foreground: #111827 - Main Text */
+    --foreground: 220 26% 14%;
+
+    /* Cards: #FFFFFF */
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
+
+    /* Primary: #1E3A8A - Deep Professional Blue */
+    --primary: 222 64% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: #16A34A - Natural Service Green */
+    --secondary: 142 72% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 48%;
+
+    /* Accent / CTA: #F59E0B - Warm Orange (Book Now only) */
+    --accent: 38 94% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 222 64% 33%;
+
+    --radius: 0.75rem;
+
+    /* Success: same as secondary green */
+    --success: 142 72% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 94% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 222 64% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 95%;
+    --sidebar-accent-foreground: 215 25% 15%;
+    --sidebar-border: 214 20% 88%;
+    --sidebar-ring: 222 64% 33%;
+  }
+
+  .dark {
+    --background: 215 28% 6%;
+    --foreground: 210 34% 96%;
+
+    --card: 215 28% 12%;
+    --card-foreground: 210 34% 96%;
+
+    --popover: 215 28% 12%;
+    --popover-foreground: 210 34% 96%;
+
+    --primary: 222 72% 55%;
+    --primary-foreground: 215 28% 6%;
+
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 215 28% 6%;
+
+    --muted: 215 25% 22%;
+    --muted-foreground: 210 20% 68%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 215 28% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 30% 18%;
+    --input: 215 30% 16%;
+    --ring: 222 72% 55%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 215 28% 6%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 215 28% 6%;
+
+    --sidebar-background: 215 28% 10%;
+    --sidebar-foreground: 210 34% 96%;
+    --sidebar-primary: 222 72% 55%;
+    --sidebar-primary-foreground: 215 28% 6%;
+    --sidebar-accent: 215 25% 22%;
+    --sidebar-accent-foreground: 210 34% 96%;
+    --sidebar-border: 215 30% 18%;
+    --sidebar-ring: 222 72% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-background text-foreground font-cairo;
+  }
+
+  /* Dark mode enhancements */
+  .dark {
+    color-scheme: dark;
+  }
+
+  .dark body {
+    background-color: rgb(13, 17, 28);
+  }
+
+  /* Better shadows for dark mode */
+  .dark * {
+    --tw-shadow-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Utility: CTA orange button */
+.btn-cta {
+  background-color: #F59E0B;
+  color: #fff;
+}
+
+.btn-cta:hover {
+  background-color: #d97706;
+}

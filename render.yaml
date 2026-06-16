@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: aakhadanaty-backend
+    runtime: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: MONGODB_URI
+        scope: all
+        value: mongodb+srv://DevDouu:RqPIwiortbsiJWNt@cluster0.d6aspiz.mongodb.net/?appName=Cluster0
+      - key: JWT_SECRET
+        scope: all
+        value: your-super-secret-jwt-key-change-this-in-production-123456789
+      - key: JWT_EXPIRE
+        scope: all
+        value: 7d
+      - key: NODE_ENV
+        scope: all
+        value: production
+      - key: PORT
+        scope: all
+        value: "5000"
+      - key: CORS_ALLOWED_ORIGINS
+        scope: all
+        value: https://aakhadanaty-app.vercel.app,http://localhost:3000,http://localhost:5173
