@@ -1,12 +1,12 @@
-{
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+﻿{
+    "outputDirectory":  "dist",
+    "buildCommand":  "npm install --legacy-peer-deps \u0026\u0026 npm run build",
+    "cleanUrls":  true,
+    "version":  2,
+    "rewrites":  [
+                     {
+                         "destination":  "/index.html",
+                         "source":  "/(.*)"
+                     }
+                 ]
 }
