@@ -4,11 +4,9 @@ const BrandLogo = ({ className }: { className?: string }) => {
   const { t } = useLanguage();
 
   return (
-    <img
-      src="/logo.png"
-      alt={t("appName")}
-      className={`h-10 w-10 rounded-lg object-cover ${className || ""}`}
-    />
+    <span className={`inline-flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10 text-primary font-black text-base ${className || ""}`}>
+      {t("footerBrandLetter")}
+    </span>
   );
 };
 

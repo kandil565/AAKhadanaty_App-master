@@ -12,7 +12,10 @@ const Footer = () => {
 
           {/* Brand */}
           <div>
-            <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-white/10 text-white text-xl font-black">
+                {t("footerBrandLetter")}
+              </span>
               <span className="text-xl font-bold font-cairo text-white">{t("footerBrand")}</span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
