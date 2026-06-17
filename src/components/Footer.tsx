@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import BrandLogo from "@/components/BrandLogo";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
@@ -13,8 +12,7 @@ const Footer = () => {
 
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <BrandLogo className="rounded-lg bg-white/10" />
+            <div className="mb-4">
               <span className="text-xl font-bold font-cairo text-white">{t("footerBrand")}</span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
@@ -77,10 +75,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-white/15 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-2 text-sm text-white/50">
           <span>© 2026 {t("footerBrand")} — {t("footerRights")}</span>
-          <span className="text-white/30 flex items-center gap-2">
-            <img src="/logo.png" alt="Siyana Plus" className="h-4 w-4 rounded-sm object-cover" />
-            Powered by Siyana Plus Platform
-          </span>
+          <span className="text-white/30">Powered by Siyana Plus Platform</span>
         </div>
       </div>
     </footer>
