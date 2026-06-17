@@ -43,9 +43,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
 
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold font-cairo text-primary">
+            <span className="inline-flex items-center rounded-2xl border border-primary/20 bg-primary/5 px-4 py-2 text-2xl font-black tracking-tight font-cairo text-primary shadow-sm shadow-primary/10">
               {t("appName")}
             </span>
           </Link>
