@@ -15,6 +15,7 @@ import {
   Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BrandLogo from "@/components/BrandLogo";
 import { useAuth } from "@/contexts/AuthContext";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -43,8 +44,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
 
-          <Link to="/" className="flex items-center gap-2">
-            <span className="inline-flex items-center rounded-2xl border border-primary/20 bg-primary/5 px-4 py-2 text-2xl font-black tracking-tight font-cairo text-primary shadow-sm shadow-primary/10">
+          <Link to="/" className="flex items-center gap-3">
+            <BrandLogo className="h-12 w-12 rounded-xl bg-white/10" />
+            <span className="text-2xl font-black tracking-tight font-cairo text-primary">
               {t("appName")}
             </span>
           </Link>
