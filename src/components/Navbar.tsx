@@ -15,6 +15,7 @@ import {
   Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BrandLogo from "@/components/BrandLogo";
 import { useAuth } from "@/contexts/AuthContext";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -45,7 +46,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="صيانة بلس" className="h-10 w-10" />
+            <BrandLogo className="rounded-lg" />
             <span className="text-xl font-bold font-cairo text-primary">
               {t("appName")}
             </span>
