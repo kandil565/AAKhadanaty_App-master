@@ -3,10 +3,15 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load environment variables
 dotenv.config();
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
+dotenv.config({ path: path.resolve(__dirname, ".env.local") });
 
 // Import routes
 import authRoutes from "./routes/authRoutes.js";
@@ -71,8 +76,8 @@ const connectDB = async () => {
 
 // Middleware to connect DB on each request (serverless-friendly)
 app.use(async (req, res, next) => {
-  // Skip DB connection for health check
-  if (req.path === "/api/health") return next();
+  // Skip DB connection for health check and chatbot endpoint
+  if (req.path === "/api/health" || req.path.startsWith("/api/chatbot")) return next();
   
   try {
     await connectDB();
