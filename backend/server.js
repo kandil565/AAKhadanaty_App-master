@@ -2,9 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
 
 // Load environment variables
 dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
 
 // Import routes
 import authRoutes from "./routes/authRoutes.js";
