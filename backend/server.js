@@ -13,8 +13,10 @@ import bookingRoutes from "./routes/bookingRoutes.js";
 import serviceProviderRoutes from "./routes/serviceProviderRoutes.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import chatbotRoutes from "./routes/chatbotRoutes.js";
 
 const app = express();
+
 
 // Health check (before everything)
 app.get("/api/health", (req, res) => {
@@ -85,6 +87,8 @@ app.use("/api/bookings", bookingRoutes);
 app.use("/api/providers", serviceProviderRoutes);
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/chatbot", chatbotRoutes);
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {
